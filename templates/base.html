@@ -1,0 +1,56 @@
+{% load static %}
+
+<html>
+<head>
+	<title>
+		Face Scrap
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static "homestyle.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "addstyle.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "donestyle.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "resultsstyle.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "resultsstyle.css" %}" />
+
+
+</head>
+<body>
+	<div id="box">
+		<div id="header">
+			<img src="{%  static 'logo'%}">
+			<ul>
+			 <li  class="logo"> <h3> <a href="file:///Users/chaudharyshaan/Desktop/home.html">Face Scrap</a> </h3> </li>
+ 			 <li class="dropdown">
+			    <a href="javascript:void(0)" class="dropbtn">Contact</a>
+   				 <div class="dropdown-content">
+   				   <a class="social" href="http://in.linkedin.com/in/iamshan">LinkedIn </a>
+  				    <a class="social"  href="http://www.facebook.com/chaudharyshaan">Facebook </a>
+ 				     <a class="social"  href="#">About</a>
+  				  </div></li>
+						<li><a href="file:///Users/chaudharyshaan/Desktop/search.html">Search</a></li>
+						 <li><a href="file:///Users/chaudharyshaan/Desktop/add.html">Add</a></li>
+						 <li><a href="file:///Users/chaudharyshaan/Desktop/home.html">Home</a></li>
+					</ul>
+		</div>
+
+        {% block body %}
+
+        {% endblock %}
+		<div id="foot">
+				<div id="footone">
+			 <h3 class="logo1"> Face Scrap </h3>
+			 <h4> Portal made by : </h4> <br>
+				- Mohammad Muzammil Afsar <br>
+				- Shan Ali
+			 <h4> copyright @2017 FaceScrap Inc. </h4>
+			</div>
+			<div id="foottwo">
+				<h4>  Contact : </h4> <br>
+				Have a question or feedback about the site or the topics I write about?
+				<br> <br>
+				Write to us at railmanbot@gmail.com
+			<center>	<img src="{% static 'p2.png' %}>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
