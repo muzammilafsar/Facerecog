@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "results1style.css" %}" />
+{% endblock %}
+{% block body %}
+    <img src="{{ pic }}" >
+        {% if pic2 %}
+            <h3> <center> Search Results : </h3>
+
+            {% for x in pic2 %}
+		<div id="content">
+			<div id="nav">
+					<div class="result">
+					<a target="_blank" href="file:///Users/chaudharyshaan/Desktop/img_fjords.jpg">
+						<img class="res" src="{{ x.photo.url }}" alt="Trolltunga Norway" height="42" width="42">
+					</a>
+					<div class="description"> Name : {{ x.name }} <br> Sex : <br> Mobile Number : <br> City : {{ x.location }} <br></div>
+					</div>
+				
+		</div>
+            {% endfor %}
+		</div>
+    {% endif %}
+{% endblock %}

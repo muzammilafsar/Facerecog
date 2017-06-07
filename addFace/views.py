@@ -11,11 +11,13 @@ def adding_entry_face(request):
             person=Person()
             person.name=form.cleaned_data['name']
             person.photo=form.cleaned_data['photo']
+            person.location=form.cleaned_data['location']
+            person.profession=form.cleaned_data['profession']
             person.save()
             # load_img = face_recognition.load_image_file(form.cleaned_data['photo'])
             # face_encoding = face_recognition.face_encodings(load_img)[0]
 
-            return redirect('home')
+            return redirect('add')
     else:
         form = PhotoForm()
         #known=Person.objects.get(id=1)

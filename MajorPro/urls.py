@@ -19,9 +19,10 @@ from addFace.views import *
 from searchindb.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', adding_entry_face,name='home'),
-    url(r'^search/',searchdb,name='search')
+    url(r'^add/', adding_entry_face,name='add'),
+    url(r'^home/',TemplateView.as_view(template_name='homepage.html') , name='home'),
+    url(r'^search/',searchdb,name='search'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

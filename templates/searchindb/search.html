@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{{ pic }}
-<img src="{{ pic }}" width="250">
-<img src="{{ pic2.photo.url }}">
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Upload</button>
-  </form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "search1style.css" %}" />
+{% endblock %}
+{% block  body %}
+
+
+<div id="content">
+			<div id="nav">
+					<h3> <center> Upload your photograph! </h3>
+
+					<form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="button">Search</button>
+                    </form>
+
+			</div>
+			<div id="main">
+			<h2> Face Scrap is the book of face. It lets you search faces by uploading photos. </h2>
+			<p> If you want to search any faces, upload a photo and see tha magic! </p>
+
+			</div>
+		</div>
+
+{% endblock %}

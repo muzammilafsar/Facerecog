@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head%}
+    	<link rel="stylesheet" type="text/css" href="{% static "home1style.css" %}" />
+
+{% endblock %}
+{% block body %}
+		<div id="content">
+			<div id="nav">
+					<h1 style = "color : #45a049"> <center> Start using Face Scrap! </center> </h1>
+					<a href="{% url 'add' %}" class="button">Add</a>
+					<a href="{% url 'search' %}" class="button">Search</a>
+			
+			</div>
+			<div id="main">
+			<h2> Face Scrap is the book of face. It lets you search faces by uploading photos. </h2>
+			<p> Face Scrap is the new generation platform that works and plays with faces. It can extract the face look from your pictures and save it in its database. You can easily search for photos by uploading pictures. I can also show similar faces. </p>
+			
+			<p class="data1"> With the deterministic approach of Face Scrap, you can - </p> <br>
+			
+				- store a face into database <br>
+			    - search your faces <br>
+				- search the similar faces <br>
+			</div>
+		</div>
+{% endblock %}

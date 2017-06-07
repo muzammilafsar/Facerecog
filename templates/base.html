@@ -6,11 +6,9 @@
 		Face Scrap
 	</title>
 	<link rel="stylesheet" type="text/css" href="{% static "homestyle.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "addstyle.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "donestyle.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "resultsstyle.css" %}" />
-	<link rel="stylesheet" type="text/css" href="{% static "resultsstyle.css" %}" />
+	{% block head %}
 
+    {% endblock %}
 
 </head>
 <body>
@@ -18,7 +16,7 @@
 		<div id="header">
 			<img src="{%  static 'logo'%}">
 			<ul>
-			 <li  class="logo"> <h3> <a href="file:///Users/chaudharyshaan/Desktop/home.html">Face Scrap</a> </h3> </li>
+			 <li  class="logo"> <h3> <a href="{% url 'home' %}">Face Scrap</a> </h3> </li>
  			 <li class="dropdown">
 			    <a href="javascript:void(0)" class="dropbtn">Contact</a>
    				 <div class="dropdown-content">
@@ -26,9 +24,9 @@
   				    <a class="social"  href="http://www.facebook.com/chaudharyshaan">Facebook </a>
  				     <a class="social"  href="#">About</a>
   				  </div></li>
-						<li><a href="file:///Users/chaudharyshaan/Desktop/search.html">Search</a></li>
-						 <li><a href="file:///Users/chaudharyshaan/Desktop/add.html">Add</a></li>
-						 <li><a href="file:///Users/chaudharyshaan/Desktop/home.html">Home</a></li>
+						<li><a href=" {% url 'search' %}">Search</a></li>
+						 <li><a href="{% url 'add' %}">Add</a></li>
+						 <li><a href="{% url 'home' %}">Home</a></li>
 					</ul>
 		</div>
 
